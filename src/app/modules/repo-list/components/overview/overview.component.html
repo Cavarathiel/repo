@@ -1,1 +1,11 @@
-<p>overview works!</p>
+<div class="header-container">
+  <span class="title">Github Repositories</span>
+  
+  <form [formGroup]="repoListForm">
+    <app-search-input [buttonText]="'Fetch'" 
+                      formControlName="githubName"
+                      (clicked)="getGithubRepositories()"
+                      [isValid]="!!repoListForm.get('githubName').value">
+    </app-search-input>
+  </form>
+</div>

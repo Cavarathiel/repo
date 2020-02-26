@@ -1,0 +1,7 @@
+<div class="input-container">
+  <input type="text"
+         #input
+         (input)="change($event)"
+         (click)="touch()">
+  <app-button (click)="buttonClicked()" [disabled]="!isValid">{{buttonText}}</app-button>
+</div>

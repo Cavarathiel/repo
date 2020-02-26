@@ -1,0 +1,17 @@
+@import '../../../../styles/all.variables.scss';
+
+:host {
+  .input-container{
+    display: flex;
+  
+    input {
+      width: 100%;
+      padding: 7px 12px;
+      box-sizing: border-box;
+      outline: none;
+      border: 0;
+      background-color: rgba($white, 0.5);
+      color: $white;
+    }
+  }
+}

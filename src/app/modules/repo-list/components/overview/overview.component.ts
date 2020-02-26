@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { RepoListService } from '../../services/repo-list.service';
 
 @Component({
   selector: 'app-overview',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
-  constructor() { }
+  public repoListForm: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private rs: RepoListService
+    ) { }
 
   ngOnInit(): void {
+    this.repoListForm = this.fb.group({
+      githubName: this.fb.control('', Validators.required)
+    });
+  }
+
+  async getGithubRepositories() {
+    const githubUser = this.repoListForm.controls.githubName.value;
+    const fleets = await this.rs.getAllRepositories(githubUser);
   }
 
 }
