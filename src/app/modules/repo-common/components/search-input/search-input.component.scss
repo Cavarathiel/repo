@@ -1,8 +1,12 @@
 @import '../../../../styles/all.variables.scss';
 
 :host {
-  .input-container{
+  .input-container {
     display: flex;
+
+    &.error {
+      border: 1px solid $font-color-error;
+    }
   
     input {
       width: 100%;
@@ -13,5 +17,11 @@
       background-color: rgba($white, 0.5);
       color: $white;
     }
+  }
+
+  .error {
+    margin-top: 5px;
+    color: $font-color-error;
+    font-size: 14px;
   }
 }

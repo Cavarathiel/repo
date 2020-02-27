@@ -50,9 +50,7 @@ export class SearchInputComponent implements OnInit {
   }
 
   buttonClicked() {
-    if (this.isValid) {
       this.clicked.emit();
-    }
   }
 
 }

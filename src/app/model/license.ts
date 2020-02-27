@@ -1,7 +1,7 @@
 export class License {
   key: string;
   name: string;
-  spdxId: string;
+  spdx_id: string;
   url: string;
-  nodeId: string;
+  node_id: string;
 }

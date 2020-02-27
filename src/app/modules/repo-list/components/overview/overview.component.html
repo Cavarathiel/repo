@@ -5,7 +5,11 @@
     <app-search-input [buttonText]="'Fetch'" 
                       formControlName="githubName"
                       (clicked)="getGithubRepositories()"
-                      [isValid]="!!repoListForm.get('githubName').value">
+                      [isValid]="isValid">
     </app-search-input>
   </form>
 </div>
+
+<app-list *ngIf="listData"
+          [listData]="listData">
+</app-list>

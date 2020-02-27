@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RepositoryDetails } from '../../../../model/repository-details';
 
 @Component({
   selector: 'app-list',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+
+  @Input()
+  public listData: RepositoryDetails[];
 
   constructor() { }
 

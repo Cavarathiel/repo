@@ -1,7 +1,8 @@
-<div class="input-container">
+<div [class.error]="!isValid" class="input-container">
   <input type="text"
          #input
          (input)="change($event)"
          (click)="touch()">
-  <app-button (click)="buttonClicked()" [disabled]="!isValid">{{buttonText}}</app-button>
+  <app-button (click)="buttonClicked()">{{buttonText}}</app-button>
 </div>
+<span class="error" *ngIf="!isValid">Username cannot be empty</span>

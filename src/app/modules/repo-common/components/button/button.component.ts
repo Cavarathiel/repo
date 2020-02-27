@@ -7,10 +7,6 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  @HostBinding('class.disabled')
-  @Input()
-  public disabled = false;
-
   constructor() { }
 
   ngOnInit(): void {

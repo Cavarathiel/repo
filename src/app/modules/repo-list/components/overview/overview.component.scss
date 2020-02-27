@@ -1,7 +1,8 @@
 :host {
   display: flex;
-  flex: auto;
-  justify-content: center;
+  //flex: auto;
+  //justify-content: center;
+  flex-direction: column;
 
   .header-container{
     display: flex;
