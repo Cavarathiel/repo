@@ -1,13 +1,11 @@
 :host {
   display: flex;
-  //flex: auto;
-  //justify-content: center;
   flex-direction: column;
 
   .header-container{
     display: flex;
     flex-direction: column;
-    //justify-content: center;
+    width: fit-content;
 
     span.title {
       font-size: 32px;
