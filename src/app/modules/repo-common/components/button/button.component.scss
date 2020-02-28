@@ -1,10 +1,18 @@
+@import '../../../../styles/all.variables.scss';
+
 :host{
   button {
     cursor: pointer;
     height: 100%;
+    background-color: transparent;
+    color: $white;
+    outline: none;
+    padding: 8px 10px;
+    border: 1px solid rgba($white, 0.5);
   }
 
   span {
     text-transform: uppercase;
   }
+
 }

@@ -11,6 +11,13 @@ export class RepoListService {
   constructor(private http: HttpClient) {
   }
 
+  static handleError(error: any): Promise<any> {
+    if (error) {
+      console.error('An error occurred');
+    }
+    return error.status;
+  }
+
   /**
    * Find all repositories to given user.
    * @param userName github user name
@@ -20,7 +27,7 @@ export class RepoListService {
 
     return this.http.get<RepositoryResponse[]>(url, {headers: {Accept: 'application/vnd.github.v3+json'}})
       .toPromise()
-      .catch();
+      .catch(RepoListService.handleError);
   }
 
   /**
@@ -33,6 +40,6 @@ export class RepoListService {
 
     return this.http.get<Branch[]>(url, {headers: {Accept: 'application/vnd.github.v3+json'}})
       .toPromise()
-      .catch();
+      .catch(RepoListService.handleError);
   }
 }

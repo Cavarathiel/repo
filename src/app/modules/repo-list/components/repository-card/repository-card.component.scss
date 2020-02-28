@@ -1,0 +1,72 @@
+@import '../../../../styles/all.variables.scss';
+
+:host {
+  .card-container {
+    background-color: rgba($white, 0.1);
+    padding: 9px 18px 16px 18px;
+    margin-bottom: 13px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($white, 0.2);
+
+      .name {
+        left: 15px;
+      }
+
+      .index {
+        color: rgba($white, 0.4);
+      }
+    }
+  }
+
+  .name-container{
+    display: flex;
+    align-items: center;
+    transition: 0.25s;
+    justify-content: space-between;
+
+    .number-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .index {
+      font-size: 60px;
+      color: rgba($white, 0.1);
+      transition: 0.25s;
+    }
+  
+    .name{
+      position: relative;
+      left: -17px;
+      font-size: 24px;
+      transition: 0.25s;
+    }
+  }
+
+  .owner, .title {
+    color: $font-color-grey;
+  }
+
+  .title {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .branches-container {
+    font-size: 17px;
+    margin-top: 8px;
+  }
+
+  .branches-section {
+    margin-bottom: 5px;
+  }
+
+  .row {
+    margin-left: 7px;
+    margin-top: 1px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -2,6 +2,6 @@ import { BranchDetails } from './branch-details';
 
 export class RepositoryDetails {
   name: string;
-  owner: string;
-  branches: BranchDetails[];
+  owner?: string;
+  branches?: BranchDetails[];
 }

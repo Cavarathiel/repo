@@ -3,10 +3,7 @@
 :host {
   .input-container {
     display: flex;
-
-    &.error {
-      border: 1px solid $font-color-error;
-    }
+    margin-top: 5px;
   
     input {
       width: 100%;
@@ -16,12 +13,25 @@
       border: 0;
       background-color: rgba($white, 0.5);
       color: $white;
+      transition: 0.25s;
+    }
+
+    ::placeholder {
+      color: rgba($white, 0.4);
+    }
+
+    .error{
+      background-color: rgba($font-color-error, 0.3) !important;
+    }
+
+    app-button {
+      transition: 0.25s;
     }
   }
 
-  .error {
-    margin-top: 5px;
+  .error-message {
     color: $font-color-error;
     font-size: 14px;
+    transition: 0.25s;
   }
 }

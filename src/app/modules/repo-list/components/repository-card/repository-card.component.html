@@ -1,0 +1,23 @@
+<div class="card-container">
+  <div class="name-container">
+    <div class="number-container">
+      <span class="index">{{index + 1}}</span>
+      <span class="name">{{repositoryData.name}}</span>
+    </div>
+    <div *ngIf="repositoryData.owner">
+      <span class="owner">Owner: {{repositoryData.owner}}</span>
+    </div>
+  </div>
+
+  <div *ngIf="repositoryData.branches" class="branches-container">Branches:</div>
+  <div *ngFor="let b of repositoryData.branches" class="branches-section">
+    <div class="row">
+      <div class="title">Name:</div> 
+      <div>{{b.name}}</div>
+    </div>
+    <div class="row">
+      <div class="title">Commit sha:</div> 
+      <div>{{b.last_sha}}</div>
+    </div>
+  </div>
+</div>

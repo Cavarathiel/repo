@@ -18,6 +18,9 @@ export class SearchInputComponent implements OnInit {
   @Input()
   public isValid = false;
 
+  @Input()
+  placeholder = '';
+
   @Output()
   clicked = new EventEmitter();
 

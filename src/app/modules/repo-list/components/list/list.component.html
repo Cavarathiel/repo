@@ -1,15 +1,6 @@
 <div *ngFor="let rep of listData; let index = index">
-  <div class="name-container">
-    <span class="index">{{index + 1}}</span>
-    <span class="name">{{rep.name}}</span>
-  </div>
+  <app-repository-card [repositoryData]="rep" 
+                       [index]="index">
+  </app-repository-card>
 
-  <div>
-    Owner: {{rep.owner}}
-  </div>
-  <div>Branches:</div>
-  <div *ngFor="let b of rep.branches">
-    <div>{{b.name}}</div>
-    <div>{{b.last_sha}}</div>
-  </div>
 </div>
